@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Networking Simulators</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 35px;
+            font-size: 2.5rem;
+        }
+
+        /* Grid for future buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .sim-btn {
+            padding: 18px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            background: #38bdf8;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .sim-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            background: #0ea5e9;
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+        }
+
+        .sim-btn:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌐 Networking Simulators</h1>
+
+        <div class="button-grid">
+
+            <!-- Existing Simulator -->
+            <button class="sim-btn"
+                onclick="openSimulator('StopNwait/stop_and_wait_sliding_window_protocol.html')">
+
+                StopNwait Simulator
+            </button>
+
+            <!-- Add Future Buttons Below -->
+
+            <!-- Example:
+            <button class="sim-btn"
+                onclick="openSimulator('GoBackN/gobackn.html')">
+
+                Go-Back-N Simulator
+            </button>
+            -->
+
+        </div>
+
+        <div class="footer">
+            Interactive Networking Protocol Visualizations
+        </div>
+    </div>
+
+    <script>
+        function openSimulator(path) {
+            window.location.href = path;
+        }
+    </script>
+
+</body>
+</html>
